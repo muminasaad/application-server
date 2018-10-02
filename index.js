@@ -1,4 +1,6 @@
 var express = require('express');
 var server = express(); 
 server.use('/', express.static(__dirname + '/www'));
-server.listen(80);
+
+var port = process.env.PORT || 1337;
+server.listen(port);
